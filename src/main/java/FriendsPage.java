@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FriendsPage {
@@ -20,7 +21,8 @@ public class FriendsPage {
 
     public void add()
     {
-        driver.findElement(By.xpath("//*[@class='friend-status__79ad9']/button")).click(); //кликнуть на добавить в друзья
+        WebElement button = driver.findElement(By.xpath("//*[@class='button__pe9qo button-core-container__0ej09']")); //найти добавить в друзья
+        button.click();
     }
 
     public boolean checkSubmitted()

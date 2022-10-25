@@ -31,22 +31,22 @@ public class Main {
         assert friendsPage1.found();
         friendsPage1.add();
 
-//        driver2 = new ChromeDriver();
-//        driver2.get("https://ok.ru/");
-//        LoginPage page2 = new LoginPage(driver2);
-//        page2.enterLogin("technoPol22");
-//        page2.enterPassword("technoPolis2022");
-//        page2.clickLogin();
-//
-//        HomePage homePage2 = new HomePage(driver2);
-//        homePage2.openFriendsPage();
-//
-//        FriendsPage friendsPage2 = new FriendsPage(driver2);
-//        friendsPage2.submitFriend();
-//
-//        friendsPage1.checkSubmitted();
-//
-//        driver1.quit();
-//        driver2.quit();
+        driver2 = new ChromeDriver();
+        driver2.get("https://ok.ru/");
+        LoginPage page2 = new LoginPage(driver2);
+        page2.enterLogin("technoPol22");
+        page2.enterPassword("technoPolis2022");
+        page2.clickLogin();
+
+        HomePage homePage2 = new HomePage(driver2);
+        homePage2.openFriendsPage();
+
+        FriendsPage friendsPage2 = new FriendsPage(driver2);
+        friendsPage2.submitFriend();
+
+        friendsPage1.checkSubmitted();
+
+        driver1.quit();
+        driver2.quit();
     }
 }
