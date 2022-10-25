@@ -24,4 +24,9 @@ public class HomePage {
         driver.findElement(By.xpath("//*[@placeholder='Введите запрос']")).sendKeys("technoPol22" + Keys.ENTER);
         driver.findElement(By.xpath("//span[text()='Добавить в друзья']")).click(); //кликнуть на добавить в друзья
     }
+
+    public void openFriendsPage()
+    {
+        driver.findElement(By.xpath("//a[@data-l='t,userFriend']")).click();
+    }
 }
