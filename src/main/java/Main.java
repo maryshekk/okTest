@@ -10,7 +10,9 @@ public class Main {
     public ChromeDriver driver1;
     public ChromeDriver driver2;
 
-    @Test {
+    @Test
+    public void test()
+        {
         System.setProperty("webdriver.chrome.driver", "C:/CLionProgects/technopolis/chromedriver_win32/chromedriver.exe");
         driver1 = new ChromeDriver();
         driver1.get("https://ok.ru/");
