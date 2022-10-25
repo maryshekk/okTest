@@ -16,11 +16,9 @@ public class Main {
         driver1 = new ChromeDriver();
         driver1.get("https://ok.ru/");
 
-        driver2 = new ChromeDriver();
-        driver2.get("https://ok.ru/");
+
 
         LoginPage page1 = new LoginPage(driver1);
-        LoginPage page2 = new LoginPage(driver2);
 
         page1.enterLogin("technoPol8");
         page1.enterPassword("technoPolis2022");
@@ -29,20 +27,26 @@ public class Main {
         HomePage homePage1 = new HomePage(driver1);
         homePage1.findPerson();
 
-        page2.enterLogin("technoPol22");
-        page2.enterPassword("technoPolis2022");
-        page2.clickLogin();
-        
-        HomePage homePage2 = new HomePage(driver2);
-        homePage2.openFriendsPage();
-
-        FriendsPage friendsPage2 = new FriendsPage(driver2);
-        friendsPage2.submitFriend();
-
         FriendsPage friendsPage1 = new FriendsPage(driver1);
-        friendsPage1.checkSubmitted();
+        assert friendsPage1.found();
+        friendsPage1.add();
 
-        driver1.quit();
-        driver2.quit();
+//        driver2 = new ChromeDriver();
+//        driver2.get("https://ok.ru/");
+//        LoginPage page2 = new LoginPage(driver2);
+//        page2.enterLogin("technoPol22");
+//        page2.enterPassword("technoPolis2022");
+//        page2.clickLogin();
+//
+//        HomePage homePage2 = new HomePage(driver2);
+//        homePage2.openFriendsPage();
+//
+//        FriendsPage friendsPage2 = new FriendsPage(driver2);
+//        friendsPage2.submitFriend();
+//
+//        friendsPage1.checkSubmitted();
+//
+//        driver1.quit();
+//        driver2.quit();
     }
 }
