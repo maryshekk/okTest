@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.*;
 
 public class Main {
     public ChromeDriver driver1;
@@ -25,12 +24,15 @@ public class Main {
 
         page1.enterLogin("technoPol8");
         page1.enterPassword("technoPolis2022");
+        page1.clickLogin();
 
         HomePage homePage1 = new HomePage(driver1);
         homePage1.findPerson();
 
         page2.enterLogin("technoPol22");
         page2.enterPassword("technoPolis2022");
+        page2.clickLogin();
+        
         HomePage homePage2 = new HomePage(driver2);
         homePage2.openFriendsPage();
 
